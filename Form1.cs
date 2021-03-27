@@ -1,11 +1,7 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Support.UI;
 using System.Windows.Forms;
 using System.Diagnostics;
 using Excel = Microsoft.Office.Interop.Excel;
