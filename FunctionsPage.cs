@@ -222,7 +222,9 @@ namespace Inv_File_Update_App
                     value2_3yr = FindElement(By.XPath(path2_3yr)).Text;
                     break;
                 case 6:
+                    Thread.Sleep(TimeSpan.FromSeconds(2));
                     FindElement(By.XPath("//button[@id='onetrust-accept-btn-handler']")).Click();
+                    Thread.Sleep(TimeSpan.FromSeconds(2));
                     FindElement(By.XPath("//div[@class='content-pane performance']/descendant::li[@class='chart active']/following-sibling::li[@class='table-view ']")).Click();
                     FindElement(By.XPath("//div[@class='content-pane performance']/descendant::div[@class='performance-right-table-panel']" +
                         "/descendant::li[@submoduleflag='MonthEnd']")).Click();
@@ -243,6 +245,7 @@ namespace Inv_File_Update_App
                     value1_3yr = FindElement(By.XPath(path1_3yr)).Text;
                     //Go to additional link for second set of percentages
                     Navigate().GoToUrl("https://www.spglobal.com/spdji/en/indices/fixed-income/sp-us-ultra-short-treasury-bill-bond-index/#overview");
+                    Thread.Sleep(TimeSpan.FromSeconds(3));
                     FindElement(By.XPath("//div[@class='content-pane performance']/descendant::li[@class='chart active']/following-sibling::li[@class='table-view ']")).Click();
                     FindElement(By.XPath("//div[@class='content-pane performance']/descendant::div[@class='performance-right-table-panel']" +
                         "/descendant::li[@submoduleflag='MonthEnd']")).Click();
