@@ -1,4 +1,16 @@
-﻿
+/************************************************************************************************
+**
+**  Date: March 29th, 2021
+**  Application Name: Inv File Update Application
+**  Author: Sean McWilliams
+**
+**  Description: Application that takes Investment Excel file with worksheet named Performance
+**               Summary and updates each percentage for different Benchmark Funds.
+**
+**  Current File: Application main Form design layout.
+**
+***********************************************************************************************/﻿
+
 namespace Inv_File_Update_App
 {
     partial class Form1
