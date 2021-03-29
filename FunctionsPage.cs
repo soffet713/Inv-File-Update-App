@@ -5,6 +5,19 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Collections.ObjectModel;
 
+/************************************************************************************************
+**
+**  Date: March 29th, 2021
+**  Application Name: Inv File Update Application
+**  Author: Sean McWilliams
+**
+**  Description: Application that takes Investment Excel file with worksheet named Performance
+**               Summary and updates each percentage for different Benchmark Funds.
+**
+**  Current File: Selenium function file to pull most recent percentages from the web.
+**
+***********************************************************************************************/
+
 namespace Inv_File_Update_App
 {
     class FunctionsPage : ChromeDriver
