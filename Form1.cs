@@ -6,6 +6,19 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Excel = Microsoft.Office.Interop.Excel;
 
+/************************************************************************************************
+**
+**  Date: March 29th, 2021
+**  Application Name: Inv File Update Application
+**  Author: Sean McWilliams
+**
+**  Description: Application that takes Investment Excel file with worksheet named Performance
+**               Summary and updates each percentage for different Benchmark Funds.
+**
+**  Current File: Application main Form code.
+**
+***********************************************************************************************/
+
 namespace Inv_File_Update_App
 {
     
