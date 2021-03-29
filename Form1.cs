@@ -25,6 +25,7 @@ namespace Inv_File_Update_App
         Excel.Workbook xlWorkBook;
         Excel.Worksheet xlWorkSheet;
 
+        //Dictionary with links to pull current investment perfoormance percentages
         IDictionary<int, string> sitelinks = new Dictionary<int, string>()
         {
             { 0, "https://fundresearch.fidelity.com/mutual-funds/performance-and-risk/31635V729" },
@@ -45,14 +46,15 @@ namespace Inv_File_Update_App
                 updateButton.Enabled = false;
             }
             saveFileButton.Enabled = false;
-            //closeFileButton.Enabled = false;
+            //closeFileButton.Enabled = false;      //commented out close button code as it's no longer used
         }
 
+        //Function call on Update Button click that calls two functions:
+        //Pull_perf_sum_data() and perf_cell_update to get current percentages from web and sends values to cells in Excel file
         private void updateButton_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text == "Performance Summary")
             {
-                
                 FunctionsPage my_page = new FunctionsPage();
                 IJavaScriptExecutor js = my_page as IJavaScriptExecutor;
                 string[] values;
@@ -108,6 +110,7 @@ namespace Inv_File_Update_App
         {
             for (int x = 0; x < vals.Length; x++)
             {
+                //Traverse through each percentage value, check if string already has percentage sign attached, and send it to correct cell of Excel worksheet
                 string num = vals[x];
                 if (!num.EndsWith("%"))
                 {
@@ -125,6 +128,7 @@ namespace Inv_File_Update_App
             }
         }
 
+        //Allows user to open Investment file and loads Performance Summary worksheet into dropdown box
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.Title = "Excel File to Edit";
@@ -151,6 +155,7 @@ namespace Inv_File_Update_App
             }
         }
 
+        //Function to allow user to save file either with a new file name or replace original file with updated percentage information
         private void button2_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Title = "Excel File to Edit";
@@ -162,10 +167,11 @@ namespace Inv_File_Update_App
 
                 xlWorkBook.SaveAs(sFileName);
             }
-            //closeFileButton.Enabled = true;
+            //closeFileButton.Enabled = true;           //commented out close button code as it's no longer used
             button3_Click(sender, e);
         }
 
+        //Function that closes excel file and kills all Excel processes
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -209,6 +215,7 @@ namespace Inv_File_Update_App
             }
         }
 
+        //Checks value of dropdown box and changes status of the Update button
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
             try
