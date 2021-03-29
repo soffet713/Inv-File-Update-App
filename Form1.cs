@@ -75,7 +75,7 @@ namespace Inv_File_Update_App
                 for (int i = 0; i < sitelinks.Count; i++)
                 {
                     my_page.Navigate().GoToUrl(sitelinks[i]);
-                    Thread.Sleep(TimeSpan.FromSeconds(2));
+                    Thread.Sleep(TimeSpan.FromSeconds(3));
                     switch (i)
                     {
                         case 0:
