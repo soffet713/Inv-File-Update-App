@@ -9,6 +9,8 @@ namespace Inv_File_Update_App
 {
     class FunctionsPage : ChromeDriver
     {
+        //Selenium function to pull data from browser for each item in top Dictionary of links
+        //Returns string array of new percentages        
         public String[] Pull_perf_sum_data(int l)
         {
             string path1_mtd, path1_3mo, path1_ytd, path1_1yr, path1_3yr, path2_mtd, path2_3mo, path2_ytd, path2_1yr, path2_3yr;
@@ -226,6 +228,7 @@ namespace Inv_File_Update_App
                     value1_ytd = FindElement(By.XPath(path1_ytd)).Text;
                     value1_1yr = FindElement(By.XPath(path1_1yr)).Text;
                     value1_3yr = FindElement(By.XPath(path1_3yr)).Text;
+                    //Go to additional link for second set of percentages
                     Navigate().GoToUrl("https://www.spglobal.com/spdji/en/indices/fixed-income/sp-us-ultra-short-treasury-bill-bond-index/#overview");
                     FindElement(By.XPath("//div[@class='content-pane performance']/descendant::li[@class='chart active']/following-sibling::li[@class='table-view ']")).Click();
                     FindElement(By.XPath("//div[@class='content-pane performance']/descendant::div[@class='performance-right-table-panel']" +
