@@ -137,6 +137,8 @@ namespace Inv_File_Update_App
                             values = my_page.Pull_perf_sum_data(i);
                             perf_cell_update(null, 30, values);
                             break;
+                        default:
+                            break;
                     }
                     xlWorkSheet.Cells[3, 1].Value = "Performance Summary";
                 }
@@ -244,6 +246,8 @@ namespace Inv_File_Update_App
                         case 20:
                             bp_values = bp_page.Pull_bond_perf_data(p);
                             bond_perf_cell_update(50, 3, bp_values);
+                            break;
+                        default:
                             break;
                     }
                 }
