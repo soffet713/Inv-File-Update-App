@@ -287,6 +287,8 @@ namespace Inv_File_Update_App
                     value2_1yr = FindElement(By.XPath(path2_1yr)).Text;
                     value2_3yr = FindElement(By.XPath(path2_3yr)).Text;
                     break;
+                 default:
+                    break;
             }
             string[] vals = { value1_mtd, value1_3mo, value1_ytd, value1_1yr, value1_3yr, value2_mtd, value2_3mo, value2_ytd, value2_1yr, value2_3yr };
             return vals;
@@ -701,6 +703,8 @@ namespace Inv_File_Update_App
                     path_ytd = "//span[@class='mod-ui-table__cell--colored__wrapper'][contains(text(),'TIAA-CREF High-Yield Fund Institutional Class')]/parent::td" +
                         "/following-sibling::td[6]/child::span";
                     value_ytd = FindElement(By.XPath(path_ytd)).Text.Trim(new Char[] { '+' });
+                    break;
+                 default:
                     break;
             }
             string[] bp_vals = { value_mtd, value_3mo, value_ytd, value_1yr, value_3yr };
