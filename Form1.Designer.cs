@@ -1,6 +1,7 @@
+
 /************************************************************************************************
 **
-**  Date: March 29th, 2021
+**  Date: March 31th, 2021
 **  Application Name: Inv File Update Application
 **  Author: Sean McWilliams
 **
@@ -9,7 +10,7 @@
 **
 **  Current File: Application main Form design layout.
 **
-***********************************************************************************************/﻿
+***********************************************************************************************/
 
 namespace Inv_File_Update_App
 {
@@ -45,11 +46,9 @@ namespace Inv_File_Update_App
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.selectFileButton = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.saveFileButton = new System.Windows.Forms.Button();
-            //this.closeFileButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -84,10 +83,6 @@ namespace Inv_File_Update_App
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.FileName = "saveFileDialog1";
-            // 
             // selectFileButton
             // 
             this.selectFileButton.Location = new System.Drawing.Point(198, 64);
@@ -116,16 +111,6 @@ namespace Inv_File_Update_App
             this.saveFileButton.Text = "Save File";
             this.saveFileButton.UseVisualStyleBackColor = true;
             this.saveFileButton.Click += new System.EventHandler(this.button2_Click);
-            //// 
-            //// closeFileButton
-            //// 
-            //this.closeFileButton.Location = new System.Drawing.Point(279, 93);
-            //this.closeFileButton.Name = "closeFileButton";
-            //this.closeFileButton.Size = new System.Drawing.Size(104, 23);
-            //this.closeFileButton.TabIndex = 5;
-            //this.closeFileButton.Text = "Close File";
-            //this.closeFileButton.UseVisualStyleBackColor = true;
-            //this.closeFileButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
@@ -143,7 +128,6 @@ namespace Inv_File_Update_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 121);
             this.Controls.Add(this.label2);
-            //this.Controls.Add(this.closeFileButton);
             this.Controls.Add(this.saveFileButton);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.selectFileButton);
@@ -164,11 +148,9 @@ namespace Inv_File_Update_App
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button selectFileButton;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button saveFileButton;
-        //private System.Windows.Forms.Button closeFileButton;
         private System.Windows.Forms.Label label2;
     }
 }
