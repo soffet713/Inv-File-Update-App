@@ -337,14 +337,6 @@ namespace Inv_File_Update_App
                 if (xlWorkSheet != null) { releaseObject(xlWorkSheet); };
                 if (xlWorkBook != null) { releaseObject(xlWorkBook); };
                 releaseObject(xlApp);
-                foreach (Process clsProcess in Process.GetProcesses())
-                {
-                    if (clsProcess.ProcessName.Equals("EXCEL"))
-                    {
-                        clsProcess.Kill();
-                        break;
-                    }
-                }
             }
             catch
             {
